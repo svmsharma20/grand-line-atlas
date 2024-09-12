@@ -21,6 +21,7 @@
   --navbar-color-light: #78909c; /* Lighter shade of primary color */
   --navbar-color-dark: #263238; /* Darker shade of primary color */
 
+  --light-grey-0: #f1f3f5;
   --light-grey-1: #d3d3d3;
   --light-grey-2: #b0b0b0;
   --neutral-grey: #808080;
@@ -35,6 +36,16 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
 }
 
 body {
