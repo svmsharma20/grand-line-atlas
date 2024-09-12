@@ -6,7 +6,7 @@ const Navigation = () => {
       <ul className={styles.navigation}>
         <li className={styles.navigation_item}>
           <a href="#" className={styles.navigation_link}>
-            Search
+            Home
           </a>
         </li>
         <li className={styles.navigation_item}>
