@@ -50,5 +50,6 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: var(--background-color);
+  background-color: var(--primary-color-light-2);
+  /* background-color: var(--background-color); */
 }

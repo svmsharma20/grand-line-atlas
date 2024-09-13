@@ -23,11 +23,11 @@ export const getAllCountriesSpecifics = (fields = []) => {
   return apiGet(BASE_URL, ENDPOINTS.all)
     .then((data) => {
       return data.map((country) => {
-        const countryFragment = {};
+        const countryFragment = [];
 
         fields.forEach((field) => {
           if (field in country) {
-            countryFragment[field] = country[field];
+            countryFragment.push(country[field]);
           }
         });
 
@@ -36,8 +36,9 @@ export const getAllCountriesSpecifics = (fields = []) => {
     })
     .then((countries) => {
       const countryName = [];
-      countries.forEach((country) => countryName.push(country.name.official));
+      countries.forEach((country) => countryName.push(country));
       countryName.sort();
-      console.log(countryName);
+      // console.log(countryName);
+      console.log(JSON.stringify(countryName));
     });
 };
