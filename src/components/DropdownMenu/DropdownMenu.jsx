@@ -6,10 +6,10 @@ const DropdownMenu = (props) => {
     props.menuItemSelectHandler(key);
   };
 
-  const filterBy = props.filterBy ? props.filterBy : () => true;
+  const filterByMethod = props.filterBy ?? (() => true);
   const options = [];
   Object.entries(props.options)
-    .filter(filterBy)
+    .filter(filterByMethod)
     .map((option) => {
       const [key, value] = option;
       return options.push(

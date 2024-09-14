@@ -4,6 +4,7 @@ import Navigation from "./components/Navigation/Navigation";
 import Search from "./components/Search/Search";
 import { getAllCountries, getAllCountriesSpecifics } from "./http/country";
 import { generateParagrah } from "./http/openrouter";
+import AppHeader from "./components/AppHeader/AppHeader";
 
 // https://restcountries.com/#endpoints-all
 // https://gitlab.com/restcountries/restcountries/-/blob/master/FIELDS.md
@@ -29,6 +30,7 @@ function App() {
   return (
     <>
       <Navigation />
+      <AppHeader />
       <Search />
     </>
   );

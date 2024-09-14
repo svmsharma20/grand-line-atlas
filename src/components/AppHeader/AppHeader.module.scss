@@ -1,0 +1,24 @@
+.header_container {
+  margin-top: 8rem;
+  width: 90rem;
+  margin: 7rem auto 0rem auto;
+  text-align: center;
+}
+
+.header_text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5rem;
+  color: var(--primary-color-dark-1);
+
+  display: inline-block;
+
+  background-image: linear-gradient(
+    to right,
+    var(--primary-color-dark-2),
+    var(--primary-color-dark-1)
+  );
+  background-clip: text;
+  color: transparent;
+}

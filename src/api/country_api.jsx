@@ -22,7 +22,7 @@ const extractReleventData = (data) => {
 
   relevantData.name = data.name.common;
   relevantData.oficialName = data.name.official;
-  relevantData.code = data.cca3;
+  relevantData.countryCode = data.cca3;
 
   // const currencyInfoKey = Object.keys(data.currencies)[0];
   // relevantData.currency = {};

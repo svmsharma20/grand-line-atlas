@@ -50,6 +50,6 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--navbar-color-light);
-  /* background-color: var(--background-color); */
+  /* background-color: var(--navbar-color-light); */
+  background-color: var(--background-color-dark-1);
 }
