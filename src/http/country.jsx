@@ -1,4 +1,5 @@
-import { apiGet } from "./comon";
+import { apiGet } from "./common";
+import { formatString } from "../utils/utils";
 
 const VERSION = "v3.1";
 const BASE_URL = `https://restcountries.com/${VERSION}`;
@@ -41,4 +42,9 @@ export const getAllCountriesSpecifics = (fields = []) => {
       // console.log(countryName);
       console.log(JSON.stringify(countryName));
     });
+};
+
+export const getCountryByCode = async (code) => {
+  const endpoint = formatString(ENDPOINTS.code, [code]);
+  return apiGet(BASE_URL, endpoint);
 };

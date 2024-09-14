@@ -1,0 +1,14 @@
+.container {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color-dark-2);
+}
+
+.solid_line {
+  border-top: 2px solid var(--primary-color-dark-2);
+  border-radius: 50px;
+  width: 100%;
+}

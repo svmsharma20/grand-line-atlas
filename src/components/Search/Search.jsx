@@ -30,6 +30,7 @@ const Search = () => {
   const [searchByKey, setSearchByKey] = useState(NAME_OPTION);
 
   const [searchText, setSearchText] = useState("");
+  const [searchTextForModal, setSearchTextForModal] = useState();
 
   const handleSearchByMenuSelect = (key) => {
     setSearchByKey(key);
@@ -48,6 +49,7 @@ const Search = () => {
   const handleSearchMenuSelectHandler = (key) => {
     const searchText = searchOptions[searchByOptions[searchByKey]][key];
     setSearchText(searchText);
+    setSearchTextForModal(searchText);
     dialogRef.current.openDialog();
   };
 
@@ -60,7 +62,7 @@ const Search = () => {
 
   return (
     <>
-      <ModalDialog ref={dialogRef} text={searchText} />
+      <ModalDialog ref={dialogRef} text={searchTextForModal} />
       <form>
         <div className={styles.container}>
           <div className={styles.dropdown}>
