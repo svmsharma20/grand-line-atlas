@@ -24,7 +24,7 @@ const searchOptions = {
 };
 
 const Search = () => {
-  // const dialogRef = useRef();
+  const dialogRef = useRef();
 
   const [isSearchByMenuVisible, setIsSearchByMenuVisible] = useState(false);
   const [searchByKey, setSearchByKey] = useState(NAME_OPTION);
@@ -48,7 +48,7 @@ const Search = () => {
   const handleSearchMenuSelectHandler = (key) => {
     const searchText = searchOptions[searchByOptions[searchByKey]][key];
     setSearchText(searchText);
-    // dialogRef.current.showModal();
+    dialogRef.current.openDialog();
   };
 
   const filterBy = (option) => {
@@ -60,7 +60,7 @@ const Search = () => {
 
   return (
     <>
-      {/* <ModalDialog ref={dialogRef} text={searchText} open /> */}
+      <ModalDialog ref={dialogRef} text={searchText} />
       <form>
         <div className={styles.container}>
           <div className={styles.dropdown}>
@@ -72,7 +72,7 @@ const Search = () => {
                 Search by <strong>{searchByOptions[searchByKey]}</strong>
                 <svg className={styles.dropdown_icon}>
                   <use
-                    xlinkHref={`src/assets/sprite.svg#icon-chevron-small-down`}
+                    xlinkHref={`src/assets/symbol-defs.svg#icon-chevron-small-down`}
                   ></use>
                 </svg>
               </button>
@@ -88,7 +88,7 @@ const Search = () => {
           <div className={styles.search}>
             <div>
               <input
-                type="text"
+                type='text'
                 className={styles.search_input}
                 onChange={handleSearchTextChangeHandler}
                 value={searchText}
@@ -96,7 +96,7 @@ const Search = () => {
               <button className={styles.search_btn}>
                 <svg className={styles.search_icon}>
                   <use
-                    xlinkHref={`src/assets/sprite.svg#icon-magnifying-glass`}
+                    xlinkHref={`src/assets/symbol-defs.svg#icon-magnifying-glass`}
                   ></use>
                 </svg>
               </button>

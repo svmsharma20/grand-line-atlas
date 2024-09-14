@@ -1,0 +1,45 @@
+.modal_container {
+  position: relative;
+  border: none;
+  border-radius: 8px;
+  padding: 2rem;
+  background-color: var(--secondary-color-light-1);
+  // height: 2rem;
+  max-width: 25rem;
+  margin: auto;
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  &[open] {
+    animation: slide-in-from-top 0.3s ease-out;
+  }
+}
+
+.close_btn {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.close_icon {
+  height: 1.25rem;
+  width: 1.25rem;
+  display: block;
+  fill: var(--primary-color-dark-2);
+
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+}
+
+@keyframes slide-in-from-top {
+  0% {
+    transform: translateY(-15%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
