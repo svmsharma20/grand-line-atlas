@@ -1,9 +1,14 @@
 import { forwardRef, useEffect, useImperativeHandle, useState } from "react";
 import { useRef } from "react";
 import styles from "./ModalDialog.module.scss";
-import { getCountryDetailsByCode } from "../../api/country_api";
+import {
+  getCodeFromCapitalName,
+  getCodeFromCountryName,
+  getCountryDetailsByCode,
+} from "../../api/country_api";
 import CountryDetails from "../CountryDetails/CountryDetails";
 import { generateParagrah } from "../../http/openrouter";
+import { CAPTIAL_OPTION, CODE_OPTION, NAME_OPTION } from "../Search/Search";
 
 const ModalDialog = forwardRef((props, ref) => {
   const currentDialogRef = useRef();
@@ -15,7 +20,20 @@ const ModalDialog = forwardRef((props, ref) => {
   useEffect(() => {
     const fetch = async () => {
       if (props.text !== undefined && props.text.length > 0) {
-        const data = await getCountryDetailsByCode(props.text);
+        let code = "";
+        if (props.searchBy === NAME_OPTION) {
+          code = getCodeFromCountryName(props.text);
+        }
+
+        if (props.searchBy === CODE_OPTION) {
+          code = props.text;
+        }
+
+        if (props.searchBy === CAPTIAL_OPTION) {
+          code = getCodeFromCapitalName(props.text);
+        }
+
+        const data = await getCountryDetailsByCode(code);
         const details = await generateParagrah(data);
         setData(data);
         setDetails(details);

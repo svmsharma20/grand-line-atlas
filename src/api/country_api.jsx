@@ -1,3 +1,5 @@
+import { COUNTRY_CAPITALS } from "../assets/data/country_capitals";
+import { COUNTRY_NAMES } from "../assets/data/country_names";
 import { getCountryByCode } from "../http/country";
 
 export const getCountryDetailsByCode = async (countryCode) => {
@@ -41,4 +43,20 @@ const extractReleventData = (data) => {
   // relevantData.maps = data.maps;
 
   return relevantData;
+};
+
+export const getCodeFromCountryName = (countryName) => {
+  return (
+    Object.keys(COUNTRY_NAMES).find(
+      (key) => COUNTRY_NAMES[key] === countryName
+    ) || null
+  );
+};
+
+export const getCodeFromCapitalName = (capitalName) => {
+  return (
+    Object.keys(COUNTRY_CAPITALS).find(
+      (key) => COUNTRY_CAPITALS[key] === capitalName
+    ) || null
+  );
 };

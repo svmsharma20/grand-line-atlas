@@ -7,9 +7,9 @@ import { COUNTRY_CAPITALS } from "../../assets/data/country_capitals";
 
 import { useState, useRef } from "react";
 
-const NAME_OPTION = "Name";
-const CODE_OPTION = "Code";
-const CAPTIAL_OPTION = "Capital";
+export const NAME_OPTION = "Name";
+export const CODE_OPTION = "Code";
+export const CAPTIAL_OPTION = "Capital";
 
 const searchByOptions = {
   [NAME_OPTION]: NAME_OPTION,
@@ -62,7 +62,11 @@ const Search = () => {
 
   return (
     <>
-      <ModalDialog ref={dialogRef} text={searchTextForModal} />
+      <ModalDialog
+        ref={dialogRef}
+        text={searchTextForModal}
+        searchBy={searchByKey}
+      />
       <form>
         <div className={styles.container}>
           <div className={styles.dropdown}>
