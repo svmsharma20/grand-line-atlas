@@ -2,24 +2,27 @@ import styles from "./DropdownMenu.module.scss";
 
 const DropdownMenu = (props) => {
   const handleMenuSelect = (event) => {
-    const optionVal = parseInt(event.target.getAttribute("data-id"));
-    props.menuItemSelectHandler(optionVal);
+    const key = event.target.getAttribute("data-id");
+    props.menuItemSelectHandler(key);
   };
 
   const filterBy = props.filterBy ? props.filterBy : () => true;
   const options = [];
-  props.options.filter(filterBy).map((option, index) => {
-    return options.push(
-      <li
-        data-id={index}
-        key={index}
-        className={styles.dropdown_list_item}
-        onClick={handleMenuSelect}
-      >
-        {option}
-      </li>
-    );
-  });
+  Object.entries(props.options)
+    .filter(filterBy)
+    .map((option) => {
+      const [key, value] = option;
+      return options.push(
+        <li
+          data-id={key}
+          key={key}
+          className={styles.dropdown_list_item}
+          onClick={handleMenuSelect}
+        >
+          {value}
+        </li>
+      );
+    });
 
   if (options.length > 0) {
     return (

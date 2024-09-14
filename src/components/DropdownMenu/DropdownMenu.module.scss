@@ -2,28 +2,6 @@
   font-size: 1rem;
   position: relative;
 
-  &_btn {
-    font-size: 0.95rem;
-    height: 3rem;
-    width: 12rem;
-    outline: none;
-    border: none;
-    margin-right: -1.75rem;
-
-    border-top-left-radius: 100px;
-    border-bottom-left-radius: 100px;
-
-    color: var(--dark-grey-1);
-    background-color: var(--secondary-color);
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: var(--dark-grey-1);
-      background-color: var(--secondary-color-light-1);
-    }
-  }
-
   &_menu {
     position: absolute;
     top: 3.25rem;
@@ -60,13 +38,5 @@
         cursor: pointer;
       }
     }
-  }
-
-  &_icon {
-    height: 1.5rem;
-    width: 1.75rem;
-    fill: var(--dark-grey-1);
-
-    display: inline-block;
   }
 }
