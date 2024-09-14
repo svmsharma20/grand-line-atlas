@@ -17,9 +17,9 @@
   --background-color-dark-1: #cfd8dc;
   --background-color-dark-2: #b0bec5;
 
-  --navbar-color: #455a64; /* Darker shade of primary color */
-  --navbar-color-light: #78909c; /* Lighter shade of primary color */
-  --navbar-color-dark: #263238; /* Darker shade of primary color */
+  --navbar-color: #455a64;
+  --navbar-color-light: #78909c;
+  --navbar-color-dark: #263238;
 
   --light-grey-0: #f1f3f5;
   --light-grey-1: #d3d3d3;
@@ -49,7 +49,7 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
-  background-color: var(--primary-color-light-2);
+  font-family: "Poppins", sans-serif;
+  background-color: var(--navbar-color-light);
   /* background-color: var(--background-color); */
 }
