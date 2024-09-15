@@ -77,9 +77,7 @@ const Search = () => {
               >
                 Search by <strong>{searchByOptions[searchByKey]}</strong>
                 <svg className={styles.dropdown_icon}>
-                  <use
-                    href={`/src/assets/symbol-defs.svg#icon-chevron-small-down`}
-                  ></use>
+                  <use href={`/symbol-defs.svg#icon-chevron-small-down`}></use>
                 </svg>
               </button>
             </div>
@@ -101,9 +99,7 @@ const Search = () => {
               />
               <button className={styles.search_btn}>
                 <svg className={styles.search_icon}>
-                  <use
-                    href={`src/assets/symbol-defs.svg#icon-magnifying-glass`}
-                  ></use>
+                  <use href={`/symbol-defs.svg#icon-magnifying-glass`}></use>
                 </svg>
               </button>
             </div>

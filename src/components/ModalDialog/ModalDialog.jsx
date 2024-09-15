@@ -63,7 +63,7 @@ const ModalDialog = forwardRef((props, ref) => {
             <form>
               <button className={styles.close_btn}>
                 <svg className={styles.close_icon}>
-                  <use href={`src/assets/symbol-defs.svg#icon-cross`}></use>
+                  <use href={`/symbol-defs.svg#icon-cross`}></use>
                 </svg>
               </button>
             </form>
