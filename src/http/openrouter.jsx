@@ -7,7 +7,8 @@ const BASE_URL = `https://openrouter.ai/api/${VERSION}`;
 const API_KEY = import.meta.env.VITE_OPENROUTER_API_KEY;
 
 // const MODEL_NAME = "meta-llama/llama-3-8b-instruct:free";
-const MODEL_NAME = "google/gemma-2-9b-it:free";
+// const MODEL_NAME = "google/gemma-2-9b-it:free";
+const MODEL_NAME = "openai/gpt-oss-20b:free";
 const MODEL_INPUT_TEXT =
   "Generate 2 paragraph with total words not more than 4000 from below details: {0}";
 
